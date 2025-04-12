@@ -1,7 +1,7 @@
 const ItemsCart = ({ items, removeItem, addItem }) => {
   console.log(items);
   return (
-    <article className="w-full p-4 border">
+    <article className="w-full p-4 ">
       <div className="flex flex-col gap-y-4">
         {Object.values(items).length === 0 ? (
           <p>No hay productos en el carrito.</p>
@@ -17,14 +17,14 @@ const ItemsCart = ({ items, removeItem, addItem }) => {
                 <div className="flex items-center gap-x-4">
                   <button
                     onClick={() => removeItem(item)} // Decrecer la cantidad
-                    className="bg-gray-300 rounded px-2 py-1"
+                    className="bg-red-400/90 rounded px-2 py-1 cursor-pointer hover:scale-105 transition"
                   >
                     -
                   </button>
-                  <span>{item.cantidad}</span>
+                  <span className="bg-white w-6 text-center py-1 rounded-md">{item.cantidad}</span>
                   <button
                     onClick={() => addItem(item)} // Incrementar la cantidad
-                    className="bg-gray-300 rounded px-2 py-1"
+                    className="bg-theme-bg-tertiary rounded px-2 py-1 cursor-pointer hover:scale-105 transition"
                   >
                     +
                   </button>

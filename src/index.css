@@ -1,6 +1,15 @@
 @import "tailwindcss";
 
 
+@theme{
+  --color-theme-bg-main: #faeee7;
+  --color-theme-bg-secondary: #ffc6c7;
+  --color-theme-text-primary: #33272a;
+  --color-theme-text-secondary: #594a4e;
+  --color-theme-bg-tertiary: #c3f0ca;
+  --color-theme-button: #ff8ba7;
+}
+
 @font-face {
   font-family: 'Pacifico';
   src: url('/fonts/Pacifico-Regular.ttf') format('truetype');

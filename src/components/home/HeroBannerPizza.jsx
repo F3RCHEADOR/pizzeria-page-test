@@ -2,7 +2,6 @@ import { useState } from "react";
 import CardPizza from "./CardPizza";
 import ButtonAddCart from "../shoppingCart/ButtonAddCart";
 
-
 import Pizza1 from "../../assets/pizza-1.png";
 import Pizza2 from "../../assets/pizza-2.png";
 import Pizza3 from "../../assets/pizza-3.png";
@@ -58,8 +57,11 @@ export default function HeroBannerPizza() {
 
   return (
     <>
+      <h1 className="text-3xl font-semibold mb-4 text-center">
+        ¿Que Pediras Hoy?
+      </h1>
       {/* Contenedor principal del banner */}
-      <div className="w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 place-items-center gap-x-4 p-4 mb-6 mt-8">
+      <div className="w-full mx-auto grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 place-items-center gap-x-4 p-4 mb-6 ">
         {/* Sección izquierda - Detalles de la pizza */}
         <section className="flex flex-col items-start sm:w-80 w-full order-1">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
@@ -75,10 +77,9 @@ export default function HeroBannerPizza() {
           <img
             src={currentPizza.imagen}
             alt={currentPizza.nombre}
-            className="w-full mx-auto sm:w-80 object-contain hover:rotate-12 transition"
+            className="w-56 mx-auto sm:w-70 md:w-80 object-contain hover:rotate-12 transition"
           />
           <ButtonAddCart product={currentPizza} />
-     
         </section>
 
         {/* Sección derecha - Ingredientes y detalles */}
@@ -108,7 +109,7 @@ export default function HeroBannerPizza() {
       </div>
 
       {/* Sección de pizzas relacionadas */}
-      <article className="flex items-center justify-evenly flex-wrap space-y-4 md:space-y-0">
+      <article className="flex items-center justify-evenly flex-wrap space-y-8 md:space-y-0">
         {pizzas
           .filter((pizza) => pizza.id !== currentPizza.id)
           .map((pizza) => (

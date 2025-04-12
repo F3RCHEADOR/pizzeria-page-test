@@ -6,7 +6,7 @@ import ShopSideBar from "../components/layout/ShopSideBar";
 
 const MainLayout = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center w-full">
+    <div className="min-h-screen flex flex-col items-center w-full bg-[#faeee7]">
       <Header />
       <main className="flex-1">
         <div className="flex w-full mt-26">

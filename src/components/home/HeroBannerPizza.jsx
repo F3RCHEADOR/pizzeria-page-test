@@ -1,5 +1,7 @@
 import { useState } from "react";
 import CardPizza from "./CardPizza";
+import ButtonAddCart from "../shoppingCart/ButtonAddCart";
+
 
 import Pizza1 from "../../assets/pizza-1.png";
 import Pizza2 from "../../assets/pizza-2.png";
@@ -14,8 +16,8 @@ const pizzas = [
     descripcion:
       "Una explosión de sabores del campo en cada bocado. Esta pizza combina la frescura de los vegetales de estación con un toque de sabor ahumado. Perfecta para los amantes de las verduras y los sabores naturales. El equilibrio entre la cebolla caramelizada y los pimientos rostizados crea una sinfonía de sabores que te transportará a un campo de huertos frescos.",
     ingredientes: ["Tomates", "Cebolla", "Pimientos", "Aceitunas"],
-    duracion: 30,
-    costo: 5,
+    duracion: 20,
+    precio: 10,
   },
   {
     id: 2,
@@ -24,8 +26,8 @@ const pizzas = [
     descripcion:
       "Una aventura de sabores picantes que pondrán a prueba tu paladar. La combinación de jalapeños frescos y salchicha ahumada crea una experiencia culinaria única. Cada bocado es una explosión de calor y sabor, perfectamente equilibrada con el queso derretido que calma la intensidad del picante. Ideal para los amantes de las pizzas con un toque de fuego.",
     ingredientes: ["Jalapeños", "Salchicha", "Chorizo", "Queso"],
-    duracion: 30,
-    costo: 5,
+    duracion: 25,
+    precio: 12,
   },
   {
     id: 3,
@@ -35,7 +37,7 @@ const pizzas = [
       "La clásica americana que nunca falla. Esta pizza combina el crujiente pepperoni con un queso derretido perfectamente dorado. Cada bocado es una explosión de sabor tradicional que te transportará a las calles de Nueva York. El toque de orégano fresco y los tomates maduros dan el equilibrio perfecto a esta obra maestra de la pizza.",
     ingredientes: ["Pepperoni", "Queso", "Tomates", "Orégano"],
     duracion: 30,
-    costo: 5,
+    precio: 15,
   },
   {
     id: 4,
@@ -44,8 +46,8 @@ const pizzas = [
     descripcion:
       "Una explosión de sabores tropicales que te transportará a la isla de Hawái. La combinación de piña fresca y jamón ahumado crea un equilibrio perfecto con el queso derretido. Ideal para los amantes de las pizzas con un toque de dulzura y picante. Cada bocado es una sinfonía de sabores que te transportará a un mundo tropical de sabores.",
     ingredientes: ["Piña", "Jamón", "Queso", "Tomates"],
-    duracion: 30,
-    costo: 5,
+    duracion: 25,
+    precio: 13,
   },
 ];
 
@@ -75,18 +77,8 @@ export default function HeroBannerPizza() {
             alt={currentPizza.nombre}
             className="w-full mx-auto sm:w-80 object-contain hover:rotate-12 transition"
           />
-          {/* Controles de cantidad */}
-          <div className="flex items-center justify-between w-40 mx-auto mt-4 sm:mt-6">
-            <button onClick={() => cantidad > 0 && setCantidad(cantidad - 1)}>
-              -
-            </button>
-            <span>{cantidad}</span>
-            <button onClick={() => setCantidad(cantidad + 1)}>+</button>
-          </div>
-          {/* Botón de agregar al carrito */}
-          <button className="flex items-center justify-center border-2 rounded-md px-3 py-1.5 my-2.5 font-medium cursor-pointer mx-auto hover:scale-110 transition border-green-500 bg-green-300 w-40 sm:w-48">
-            Agregar al carrito
-          </button>
+          <ButtonAddCart product={currentPizza} />
+     
         </section>
 
         {/* Sección derecha - Ingredientes y detalles */}
@@ -107,9 +99,9 @@ export default function HeroBannerPizza() {
             <p className="text-gray-600 mb-2 pl-4 sm:text-base text-sm">
               {currentPizza.duracion} minutos
             </p>
-            <h3 className="text-2xl sm:text-3xl font-bold">Costo</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold">Precio</h3>
             <p className="text-gray-600 mb-2 pl-4 sm:text-base text-sm">
-              {currentPizza.costo} dólares
+              {currentPizza.precio} dólares
             </p>
           </div>
         </section>

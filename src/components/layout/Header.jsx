@@ -4,7 +4,7 @@ import ButtonTogleCart from "../shoppingCart/ButtonTogleCart";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 bg-white shadow-md py-4 px-6 w-full mx-2 ">
+    <header className="fixed top-0 z-50 bg-white shadow-md py-4 px-6 w-full mx-2 ">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo izquierdo */}
         <div className="flex items-center">

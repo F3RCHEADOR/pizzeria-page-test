@@ -1,9 +1,10 @@
 import React from "react";
+import HeroBannerPizza from "../components/home/HeroBannerPizza";
 
 const Home = () => {
     return (
         <div className="min-h-full w-full mx-auto">
-           home page
+           <HeroBannerPizza />
         </div>
     )
 }

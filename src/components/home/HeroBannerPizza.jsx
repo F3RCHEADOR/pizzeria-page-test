@@ -7,22 +7,32 @@ import pizzaImages from "../../utils/images.js";
 export default function HeroBannerPizza() {
   // Estado para la pizza actual 
   const [currentPizza, setCurrentPizza] = useState([]);
-  //Estado para todas las pizzas
+  // Estado para todas las pizzas
   const [pizzas, setPizzas] = useState([]);
+  // Estado para el cargue de las pizzas 
+  const [loading, setLoading] = useState(true);
 
+  // useEffect para cargar las pizzas
   useEffect(() => {
     const loadPizzas = async () => {
       try {
         const pizzas = await fetchPizzas();
         setPizzas(pizzas);
         setCurrentPizza(pizzas[0]);
+        setLoading(false);
       } catch (error) {
         console.error('Error al cargar las pizzas:', error);
       }
     }
     loadPizzas();
   }, [])
-  return (
+
+  return loading ? (
+    <div className="flex flex-col items-center justify-center h-screen">
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
+      <h2 className="text-center font-semibold italic">Cargando Pizzas :3</h2>
+    </div>
+  ) : (
     <>
       <h1 className="text-3xl font-semibold mb-4 text-center">
         ¿Que Pediras Hoy?

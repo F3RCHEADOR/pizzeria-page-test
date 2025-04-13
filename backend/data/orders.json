@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "fecha": "2025-04-12T14:30:00Z",
+    "items": [
+      {
+        "pizzaId": 4,
+        "nombre": "Hawaiana",
+        "cantidad": 2,
+        "precioUnitario": 13
+      },
+      {
+        "pizzaId": 1,
+        "nombre": "Campesina",
+        "cantidad": 1,
+        "precioUnitario": 10
+      }
+    ],
+    "total": 36
+  },
+  {
+    "id": 2,
+    "fecha": "2025-04-12T15:00:00Z",
+    "items": [
+      {
+        "pizzaId": 2,
+        "nombre": "Picante",
+        "cantidad": 1,
+        "precioUnitario": 12
+      }
+    ],
+    "total": 12
+  },
+  {
+    "id": 3,
+    "fecha": "2025-04-12T14:30:00Z",
+    "items": [
+      {
+        "pizzaId": 4,
+        "nombre": "Hawaiana",
+        "cantidad": 1,
+        "precioUnitario": 13
+      },
+      {
+        "pizzaId": 1,
+        "nombre": "Campesina",
+        "cantidad": 1,
+        "precioUnitario": 10
+      }
+    ],
+    "total": 23
+  }
+]

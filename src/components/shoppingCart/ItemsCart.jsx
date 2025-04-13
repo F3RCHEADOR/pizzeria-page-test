@@ -1,5 +1,6 @@
+import pizzaImages from "../../utils/images.js";
+
 const ItemsCart = ({ items, removeItem, addItem }) => {
-  console.log(items);
   return (
     <article className="w-full p-4 ">
       <div className="flex flex-col gap-y-4">
@@ -11,7 +12,7 @@ const ItemsCart = ({ items, removeItem, addItem }) => {
               key={item.id}
               className="flex items-center justify-between gap-x-2.5 border-b-2 border-dashed"
             >
-              <img src={item.imagen} className="w-16 h-16 object-cover" />
+              <img src={pizzaImages[item.id]} className="w-16 h-16 object-cover" />
               <div className="flex flex-col items-start">
                 <h2 className="mb-2">Pizza {item.nombre}</h2>
                 <div className="flex items-center gap-x-4">

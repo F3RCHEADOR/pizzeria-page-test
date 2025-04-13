@@ -1,7 +1,7 @@
 // src/api/pizzeriaApi.js
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api'; // api direccion
+const API_BASE_URL = import.meta.env.API_BASE_URL;
 
 // Obtener todas las pizzas
 export const fetchPizzas = async () => {

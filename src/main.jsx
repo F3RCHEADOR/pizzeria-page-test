@@ -8,6 +8,6 @@ import "./index.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <App />
-    <Toaster /> // inicializamos el toaster
+    <Toaster /> 
   </BrowserRouter>,
 );

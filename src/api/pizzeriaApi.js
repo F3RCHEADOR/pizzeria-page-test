@@ -42,7 +42,11 @@ export const fetchOrderById = async (id) => {
     const response = await axios.get(`${API_BASE_URL}/orders/${id}`);
     return response.data;
   } catch (error) {
-    console.error(`Error al obtener la orden con ID ${id}:`, error);
+    if (error.response && error.response.status === 404) {
+      // Devuelve null si no se encontró la orden
+      return null;
+    }
+    // Lanza cualquier otro error 
     throw error;
   }
 };

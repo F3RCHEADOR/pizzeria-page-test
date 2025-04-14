@@ -4,7 +4,7 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <nav className="flex justify-center space-x-6">
             <a
-              href="https://github.com/tu-usuario"
+              href="https://github.com/F3RCHEADOR/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-theme-text-secondary hover:text-gray-900"
@@ -14,7 +14,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://twitter.com/tu-usuario"
+              href="https://twitter.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-theme-text-secondary hover:text-blue-500"
@@ -24,7 +24,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://instagram.com/tu-usuario"
+              href="https://instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-theme-text-secondary hover:text-pink-600"
@@ -35,7 +35,7 @@ const Footer = () => {
             </a>
           </nav>
           <p className="text-center text-gray-500 text-sm mt-4">
-            {new Date().getFullYear()} Pizzeria App. Todos los derechos
+            {new Date().getFullYear()} Pizzeria App. (T.F) Todos los derechos
             reservados.
           </p>
         </div>

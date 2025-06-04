@@ -21,7 +21,7 @@ const HeroOrder = () => {
   }, []);
 
   return (
-    <div>
+    <div className="w-full max-w-5xl mx-auto">
       <CardOrder orders={orders} />
       <FormOrder />
     </div>

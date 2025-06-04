@@ -15,5 +15,5 @@ app.use('/api/pizzas', pizzasRoutes);
 app.use('/api/orders', orderRoutes);
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server corriendo en http://localhost:${port}`);
 });
